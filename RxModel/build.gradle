@@ -1,11 +1,10 @@
 apply plugin: 'java'
 apply plugin: 'kotlin'
 apply plugin: 'com.novoda.bintray-release'
-
+apply from: file('../library.gradle')
 
 targetCompatibility = JavaVersion.VERSION_1_8
 sourceCompatibility = JavaVersion.VERSION_1_8
-group = 'com.github.wada811'
 
 dependencies {
     // Language
@@ -13,7 +12,7 @@ dependencies {
 }
 
 publish {
-    def library = rootProject.ext.library
+    def library = project.ext.library
     userOrg = library.user
     groupId = library.groupId
     artifactId = "RxModel"

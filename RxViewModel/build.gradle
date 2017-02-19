@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.novoda.bintray-release'
+apply from: file('../library.gradle')
 
 android {
     compileSdkVersion 25
@@ -17,7 +18,7 @@ dependencies {
 }
 
 publish {
-    def library = rootProject.ext.library
+    def library = project.ext.library
     userOrg = library.user
     groupId = library.groupId
     artifactId = "RxViewModel"
