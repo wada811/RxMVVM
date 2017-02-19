@@ -32,5 +32,6 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     // Android
     compile 'com.android.support:appcompat-v7:25.1.1'
-    compile 'com.github.wada811.rxmvvm:RxViewModel:0.0.2'
+    // MVVM
+    compile 'com.github.wada811.rxmvvm:RxViewModel:0.0.3'
 }

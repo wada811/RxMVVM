@@ -9,5 +9,8 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.wada811.rxmvvm:RxModel:0.0.2'
+    // Language
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    // MVVM
+    compile 'com.github.wada811.rxmvvm:RxModel:0.0.3'
 }
