@@ -10,6 +10,10 @@ android {
         minSdkVersion 19
         targetSdkVersion 25
     }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+    }
 }
 
 dependencies {
