@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RxMVVM.iml" filepath="$PROJECT_DIR$/.idea/modules/RxMVVM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RxMVVM.iml" filepath="$PROJECT_DIR$/RxMVVM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RxModel/RxModel.iml" filepath="$PROJECT_DIR$/RxModel/RxModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RxViewModel/RxViewModel.iml" filepath="$PROJECT_DIR$/RxViewModel/RxViewModel.iml" />
     </modules>
   </component>
 </project>
