@@ -1,0 +1,14 @@
+apply plugin: 'java'
+apply plugin: 'kotlin'
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+//    compile 'com.github.wada811:RxMVVM:0.1.0'
+//    compile 'com.github.wada811.rxmvvm:RxModel:0.0.1'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

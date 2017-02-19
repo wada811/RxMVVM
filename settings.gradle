@@ -1,1 +1,1 @@
-include ':RxModel', ':RxViewModel'
+include ':RxModel', ':RxViewModel', ':sample-domain', ':sample-app'
