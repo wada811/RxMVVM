@@ -41,5 +41,5 @@ dependencies {
     // Android
     compile 'com.android.support:appcompat-v7:25.1.1'
     // MVVM
-    compile 'com.github.wada811.rxmvvm:RxViewModel:0.0.3'
+    compile 'com.github.wada811.rxmvvm:RxViewModel:0.1.1'
 }
