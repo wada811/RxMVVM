@@ -1,8 +1,8 @@
 ext {
     library = [
             user       : "wada811",
-            groupId    : "com.github.wada811",
-            version    : "0.1.0",
+            groupId    : "com.wada811.rxmvvvm",
+            version    : "0.1.1",
             description: "MVVM infrastructure for Android using RxJava and DataBinding.",
             website    : "https://github.com/wada811/RxMVVVM",
             licences   : ['Apache-2.0']

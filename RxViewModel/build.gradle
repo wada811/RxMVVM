@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.github.dcendents.android-maven'
 apply from: file('../library.gradle')
 
 android {
@@ -34,13 +34,31 @@ dependencies {
     kapt "com.android.databinding:compiler:$android_tools_version"
 }
 
-publish {
-    def library = project.ext.library
-    userOrg = library.user
-    groupId = library.groupId
-    artifactId = "RxViewModel"
-    version = library.version
-    description = library.description
-    website = library.website
-    licences = library.licences
+def library = project.ext.library
+group = library.groupId
+version = library.version
+
+// build a jar with source files
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    failOnError  false
+    source = android.sourceSets.main.java.sourceFiles
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    classpath += configurations.compile
+}
+
+// build a jar with javadoc
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    //noinspection GroovyAccessibility
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
 }
