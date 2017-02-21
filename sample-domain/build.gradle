@@ -17,5 +17,5 @@ dependencies {
     // Language
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     // MVVM
-    compile 'com.github.wada811.rxmvvm:RxModel:0.1.1'
+    compile 'com.github.wada811.rxmvvm:RxModel:0.1.2'
 }
