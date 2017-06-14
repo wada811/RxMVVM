@@ -5,10 +5,11 @@ import com.wada811.rxmvvm.rxviewmodel.extensions.addTo
 import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
+import io.reactivex.subjects.BehaviorSubject
 import io.reactivex.subjects.PublishSubject
 import io.reactivex.subjects.Subject
 
-class RxCommand<T>(canExecuteSource: Observable<Boolean> = Observable.just(true), canExecuteInitially: Boolean = true) : Disposable {
+class RxCommand<T>(canExecuteSource: Observable<Boolean> = BehaviorSubject.createDefault(true), canExecuteInitially: Boolean = true) : Disposable {
     private val executor: Subject<T> = PublishSubject.create<T>().toSerialized()
     val canExecute: ObservableBoolean = ObservableBoolean(canExecuteInitially)
     private val disposables = CompositeDisposable()

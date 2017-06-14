@@ -47,6 +47,8 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.1.1'
     // DataBinding
     kapt "com.android.databinding:compiler:$android_tools_version"
+    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    compile 'com.jakewharton.rxbinding2:rxbinding-kotlin:2.0.0'
     // MVVM
 //    compile 'com.github.wada811.rxmvvm:RxViewModel:0.2.1'
     compile project(":RxViewModel")

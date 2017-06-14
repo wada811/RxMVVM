@@ -8,7 +8,7 @@ interface Function0<out R> : Function {
 
 interface Function1<in T1, out R> : Function {
     @Throws(Exception::class)
-    fun invoke(t1: T1): R
+    fun invoke(activity: T1): R
 }
 
 interface Function2<in T1, in T2, out R> : Function {
