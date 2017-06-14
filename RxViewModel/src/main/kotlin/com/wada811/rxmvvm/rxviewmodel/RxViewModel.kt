@@ -1,5 +1,6 @@
 package com.wada811.rxmvvm.rxviewmodel
 
+import com.wada811.rxmvvm.rxviewmodel.collections.RxArrayList
 import com.wada811.rxmvvm.rxviewmodel.commands.RxCommand
 import com.wada811.rxmvvm.rxviewmodel.properties.ReadOnlyRxProperty
 import com.wada811.rxmvvm.rxviewmodel.properties.RxProperty
@@ -16,8 +17,13 @@ open class RxViewModel(private val disposables: CompositeDisposable = CompositeD
         disposables.add(this)
         return this
     }
-
+    
     protected fun <T> RxCommand<T>.asManaged(): RxCommand<T> {
+        disposables.add(this)
+        return this
+    }
+    
+    protected fun <T> RxArrayList<T>.asManaged(): RxArrayList<T> {
         disposables.add(this)
         return this
     }

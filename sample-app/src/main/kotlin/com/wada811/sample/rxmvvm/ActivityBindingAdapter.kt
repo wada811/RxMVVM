@@ -1,4 +1,4 @@
-package com.wada811.rxmvvm.rxviewmodel.binding
+package com.wada811.sample.rxmvvm
 
 import android.app.Activity
 import android.databinding.DataBindingUtil
@@ -13,6 +13,7 @@ where TBinding : ViewDataBinding, TViewModel : RxViewModel {
     private val disposables = CompositeDisposable()
     
     init {
+        binding.setVariable(BR.viewModel, viewModel)
         disposables.add(viewModel)
     }
     

@@ -9,4 +9,7 @@ interface NotifyPropertyChanged {
         .filter { it.thisRef == this }
         .filter { it.propertyName == propertyName }
         .map { it.value as T }
+    
+    fun ObserveProperty(): Observable<PropertyChangedEventArgs<*>> = RxModelSubjects.propertyChangedSubject
+        .filter { it.thisRef == this }
 }

@@ -17,7 +17,9 @@ dependencies {
     // Test
     testCompile "junit:junit:4.12"
     // Rx
-    compile "io.reactivex.rxjava2:rxjava:2.0.5"
+    compile "io.reactivex.rxjava2:rxjava:2.1.0"
+    // Lock
+    compile "com.googlecode.concurrent-locks:concurrent-locks:1.0.0" // https://github.com/npgall/concurrent-locks
 }
 
 def library = project.ext.library
