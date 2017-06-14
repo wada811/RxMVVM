@@ -4,9 +4,10 @@ import io.reactivex.Observable
 import java.util.*
 
 class RxProperty<T>(source: Observable<T>, initialValue: T, mode: EnumSet<RxPropertyMode> = RxPropertyMode.DEFAULT) : ReadOnlyRxProperty<T>(source, initialValue, mode) {
+    @Suppress("RedundantVisibilityModifier")
     override var value: T = initialValue
         get
-        set(value) {
+        public set(value) {
             if (field != value) {
                 field = value
                 super.value = value
