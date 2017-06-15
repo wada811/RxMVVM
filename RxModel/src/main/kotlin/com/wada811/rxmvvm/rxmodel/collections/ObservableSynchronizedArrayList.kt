@@ -245,7 +245,7 @@ class ObservableSynchronizedArrayList<T>(source: Collection<T> = listOf(), priva
         }
         
         fun add(index: Int, element: T) {
-            disposables[index] = subscribeItem(index, element)
+            disposables.add(index, subscribeItem(index, element))
         }
         
         fun addAll(startIndex: Int, elements: Collection<T>) {
