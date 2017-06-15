@@ -46,7 +46,7 @@ class ObservableSynchronizedArrayList<T>(source: Collection<T> = listOf(), priva
     override fun addAll(elements: Collection<T>): Boolean {
         var result = false
         lock.updateLock({
-            list.lastIndex
+            Math.max(list.lastIndex, 0)
         }, {
             index ->
             result = list.addAll(elements)
